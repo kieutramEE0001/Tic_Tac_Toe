@@ -40,14 +40,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.ptbMark = new System.Windows.Forms.PictureBox();
+            this.pictbMark = new System.Windows.Forms.PictureBox();
             this.prgbarTIMER = new System.Windows.Forms.ProgressBar();
-            this.txtbPlayer = new System.Windows.Forms.TextBox();
+            this.txtbPlayerName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMark)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictbMark)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlChessBoard
@@ -92,11 +92,11 @@
             // btnLAN
             // 
             this.btnLAN.BackColor = System.Drawing.Color.Pink;
-            this.btnLAN.Font = new System.Drawing.Font("VT323", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLAN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLAN.Font = new System.Drawing.Font("VT323", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLAN.ForeColor = System.Drawing.Color.White;
             this.btnLAN.Location = new System.Drawing.Point(85, 158);
             this.btnLAN.Name = "btnLAN";
-            this.btnLAN.Size = new System.Drawing.Size(146, 40);
+            this.btnLAN.Size = new System.Drawing.Size(146, 50);
             this.btnLAN.TabIndex = 7;
             this.btnLAN.Text = "CONNECT";
             this.btnLAN.UseVisualStyleBackColor = false;
@@ -146,9 +146,9 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.ptbMark);
+            this.panel3.Controls.Add(this.pictbMark);
             this.panel3.Controls.Add(this.prgbarTIMER);
-            this.panel3.Controls.Add(this.txtbPlayer);
+            this.panel3.Controls.Add(this.txtbPlayerName);
             this.panel3.Location = new System.Drawing.Point(781, 554);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(311, 158);
@@ -157,20 +157,23 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Agency FB", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 8);
+            this.label4.Font = new System.Drawing.Font("Anaheim", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 35);
+            this.label4.Size = new System.Drawing.Size(125, 30);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Player:";
+            this.label4.Text = "Next Turn: ";
             // 
-            // ptbMark
+            // pictbMark
             // 
-            this.ptbMark.Location = new System.Drawing.Point(194, 40);
-            this.ptbMark.Name = "ptbMark";
-            this.ptbMark.Size = new System.Drawing.Size(105, 105);
-            this.ptbMark.TabIndex = 2;
-            this.ptbMark.TabStop = false;
+            this.pictbMark.BackColor = System.Drawing.Color.Transparent;
+            this.pictbMark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictbMark.Location = new System.Drawing.Point(194, 40);
+            this.pictbMark.Name = "pictbMark";
+            this.pictbMark.Size = new System.Drawing.Size(105, 105);
+            this.pictbMark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictbMark.TabIndex = 2;
+            this.pictbMark.TabStop = false;
             // 
             // prgbarTIMER
             // 
@@ -179,13 +182,13 @@
             this.prgbarTIMER.Size = new System.Drawing.Size(179, 43);
             this.prgbarTIMER.TabIndex = 1;
             // 
-            // txtbPlayer
+            // txtbPlayerName
             // 
-            this.txtbPlayer.Font = new System.Drawing.Font("Anaheim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbPlayer.Location = new System.Drawing.Point(9, 59);
-            this.txtbPlayer.Name = "txtbPlayer";
-            this.txtbPlayer.Size = new System.Drawing.Size(179, 37);
-            this.txtbPlayer.TabIndex = 0;
+            this.txtbPlayerName.Font = new System.Drawing.Font("Anaheim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbPlayerName.Location = new System.Drawing.Point(9, 59);
+            this.txtbPlayerName.Name = "txtbPlayerName";
+            this.txtbPlayerName.Size = new System.Drawing.Size(179, 37);
+            this.txtbPlayerName.TabIndex = 0;
             // 
             // Tic_Tac_Toe
             // 
@@ -205,7 +208,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMark)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictbMark)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,9 +226,9 @@
         private System.Windows.Forms.Button btnLAN;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox ptbMark;
+        private System.Windows.Forms.PictureBox pictbMark;
         private System.Windows.Forms.ProgressBar prgbarTIMER;
-        private System.Windows.Forms.TextBox txtbPlayer;
+        private System.Windows.Forms.TextBox txtbPlayerName;
     }
 }
 

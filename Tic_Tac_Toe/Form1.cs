@@ -13,12 +13,12 @@ namespace Tic_Tac_Toe
     public partial class Tic_Tac_Toe : Form
     {
         #region Properties
-        ChessBoardManage ChessBoard;
+        ChessBoardManager ChessBoard;
         #endregion
         public Tic_Tac_Toe()
         {
             InitializeComponent();
-            ChessBoard = new ChessBoardManage(pnlChessBoard);
+            ChessBoard = new ChessBoardManager(pnlChessBoard, txtbPlayerName, pictbMark);
             ChessBoard.Draw_ChessBoard();
         }
 
