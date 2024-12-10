@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tic_Tac_Toe));
             this.pnlChessBoard = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLAN = new System.Windows.Forms.Button();
             this.txtbID = new System.Windows.Forms.TextBox();
@@ -39,24 +40,28 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictbMark = new System.Windows.Forms.PictureBox();
             this.prgbarTime = new System.Windows.Forms.ProgressBar();
             this.txtbPlayerName = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictbMark = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tmCooldown = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictbMark)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlChessBoard
             // 
-            this.pnlChessBoard.Location = new System.Drawing.Point(12, 10);
+            this.pnlChessBoard.Location = new System.Drawing.Point(12, 31);
             this.pnlChessBoard.Name = "pnlChessBoard";
             this.pnlChessBoard.Size = new System.Drawing.Size(760, 702);
             this.pnlChessBoard.TabIndex = 0;
@@ -64,10 +69,22 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(781, 12);
+            this.panel1.Location = new System.Drawing.Point(781, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 305);
+            this.panel1.Size = new System.Drawing.Size(306, 306);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Tic_Tac_Toe.Properties.Resources._16;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.InitialImage = global::Tic_Tac_Toe.Properties.Resources._16;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(306, 306);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -79,9 +96,9 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(781, 323);
+            this.panel2.Location = new System.Drawing.Point(781, 344);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(312, 225);
+            this.panel2.Size = new System.Drawing.Size(306, 222);
             this.panel2.TabIndex = 2;
             // 
             // btnLAN
@@ -147,10 +164,22 @@
             this.panel3.Controls.Add(this.pictbMark);
             this.panel3.Controls.Add(this.prgbarTime);
             this.panel3.Controls.Add(this.txtbPlayerName);
-            this.panel3.Location = new System.Drawing.Point(781, 554);
+            this.panel3.Location = new System.Drawing.Point(781, 572);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(311, 158);
+            this.panel3.Size = new System.Drawing.Size(306, 161);
             this.panel3.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Tic_Tac_Toe.Properties.Resources._18;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.InitialImage = global::Tic_Tac_Toe.Properties.Resources._17;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
@@ -161,6 +190,17 @@
             this.label4.Size = new System.Drawing.Size(125, 30);
             this.label4.TabIndex = 3;
             this.label4.Text = "Next Turn: ";
+            // 
+            // pictbMark
+            // 
+            this.pictbMark.BackColor = System.Drawing.Color.Transparent;
+            this.pictbMark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictbMark.Location = new System.Drawing.Point(216, 69);
+            this.pictbMark.Name = "pictbMark";
+            this.pictbMark.Size = new System.Drawing.Size(77, 77);
+            this.pictbMark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictbMark.TabIndex = 2;
+            this.pictbMark.TabStop = false;
             // 
             // prgbarTime
             // 
@@ -178,67 +218,74 @@
             this.txtbPlayerName.Size = new System.Drawing.Size(179, 37);
             this.txtbPlayerName.TabIndex = 0;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Tic_Tac_Toe.Properties.Resources._18;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.InitialImage = global::Tic_Tac_Toe.Properties.Resources._17;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 38);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictbMark
-            // 
-            this.pictbMark.BackColor = System.Drawing.Color.Transparent;
-            this.pictbMark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictbMark.Location = new System.Drawing.Point(216, 69);
-            this.pictbMark.Name = "pictbMark";
-            this.pictbMark.Size = new System.Drawing.Size(77, 77);
-            this.pictbMark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictbMark.TabIndex = 2;
-            this.pictbMark.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = global::Tic_Tac_Toe.Properties.Resources._16;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.InitialImage = global::Tic_Tac_Toe.Properties.Resources._14;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(312, 305);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // tmCooldown
             // 
             this.tmCooldown.Tick += new System.EventHandler(this.tmCooldown_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mENUToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1098, 28);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mENUToolStripMenuItem
+            // 
+            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newGameToolStripMenuItem,
+            this.quitToolStripMenuItem});
+            this.mENUToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.mENUToolStripMenuItem.Text = "MENU";
+            // 
+            // newGameToolStripMenuItem
+            // 
+            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
+            this.newGameToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newGameToolStripMenuItem.Text = "New Game";
+            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
+            // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // Tic_Tac_Toe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 724);
+            this.ClientSize = new System.Drawing.Size(1098, 753);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlChessBoard);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Tic_Tac_Toe";
             this.Text = "Tic_Tac_Toe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tic_Tac_Toe_FormClosing);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictbMark)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -247,7 +294,6 @@
         private System.Windows.Forms.Panel pnlChessBoard;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtbID;
@@ -260,6 +306,11 @@
         private System.Windows.Forms.TextBox txtbPlayerName;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Timer tmCooldown;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -98,10 +98,10 @@ namespace Tic_Tac_Toe
             this.PlayerMark = mark;
             this.Player = new List<Player>()
             {
+                //Lấy ảnh số 12 từ file Resources để gán cho Player 1
                 new Player("Player 1", Image.FromFile(Application.StartupPath + "\\Resources\\12.png")),
+                //Lấy ảnh số 13 từ file Resources để gán cho Player 2
                 new Player("Player 2", Image.FromFile(Application.StartupPath + "\\Resources\\13.png"))
-                //new Player(Console.ReadLine(), Image.FromFile(Application.StartupPath + "\\Resources\\12.png")),
-                //new Player(Console.ReadLine(), Image.FromFile(Application.StartupPath + "\\Resources\\13.png"))
             };
             CurrentPlayer = 0;
         }
@@ -110,7 +110,16 @@ namespace Tic_Tac_Toe
         #region Methods
         public void Draw_ChessBoard()
         {
+            //Cho phép nhấn vào 1 button bất kỳ
             ChessBoard.Enabled = true;
+
+            //Xóa hết tất cả đối tượng trước khi tạo bàn cờ mới
+            ChessBoard.Controls.Clear();
+
+            //Khởi tạo lại lượt chơi, bắt đầu từ player 1
+            CurrentPlayer = 0;
+            Change_Player_Turn();
+
             Button oldbutton = new Button() { Width = 0, Location = new Point(0, 0) };
             Chess_Matrix = new List<List<Button>>();
             for (int i = 0; i < Const.ChessBoard_H; i++)

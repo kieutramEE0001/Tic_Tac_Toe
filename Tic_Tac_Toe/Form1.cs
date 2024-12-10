@@ -19,6 +19,7 @@ namespace Tic_Tac_Toe
         {
             InitializeComponent();
             ChessBoard = new ChessBoardManager(pnlChessBoard, txtbPlayerName, pictbMark);
+
             //Ủy thác event kết thúc game và đổi lượt 
             ChessBoard.EndedGame += ChessBoard_EndedGame;
             ChessBoard.PlayerMarked += ChessBoard_PlayerMarked;
@@ -31,17 +32,19 @@ namespace Tic_Tac_Toe
             //Cài đặt thuộc tính cho Timer
             tmCooldown.Interval = Const.CoolDown_Interval;
 
-            ChessBoard.Draw_ChessBoard();
+            NewGame();
 
             //tmCooldown.Start();
         }
 
+        //Hàm kết thúc Game
         void EndGame()
         {
             tmCooldown.Stop();
             pnlChessBoard.Enabled = false;
-            //MessageBox.Show("Kết thúc Game!");
         }
+
+        //Hàm bắt đầu tính thời gian của từng lượt 
         void ChessBoard_PlayerMarked(object sender, EventArgs e)
         {
             tmCooldown.Start();
@@ -63,7 +66,33 @@ namespace Tic_Tac_Toe
                 EndGame();
                 MessageBox.Show("Mất lượt! Kết thúc Game!");
             } 
-                
+        }
+
+        //Hàm bắt đầu Game mới
+        void NewGame()
+        {
+            prgbarTime.Value = 0;
+            tmCooldown.Stop();
+            ChessBoard.Draw_ChessBoard();
+        }
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewGame();
+        }
+
+        //Hàm thoát Game 
+        void QuitGame() 
+        {
+            Application.Exit();
+        }
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuitGame();
+        }
+        private void Tic_Tac_Toe_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn thoát Game không?", "THÔNG BÁO", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+                e.Cancel = true; //Thay đổi event
         }
     }
 
