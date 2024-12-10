@@ -29,8 +29,5 @@ namespace Tic_Tac_Toe
             this.Name = name;
             this.Mark = mark;
         }
-       
-
-
     }
 }
