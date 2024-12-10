@@ -230,7 +230,7 @@ namespace Tic_Tac_Toe
         private bool isSecondDiagonal(Button button)
         {
             Point point = GetChessPoint(button);
-            //Duyệt lên phía trên, bên trái
+            //Duyệt lên phía trên, bên phải
             int countTopRight = 0;
             for (int i = 0; i <= point.X; i++)
             {
@@ -243,7 +243,7 @@ namespace Tic_Tac_Toe
                 else
                     break;
             }
-            //Duyệt xuống phía dưới, bên phải
+            //Duyệt xuống phía dưới, bên trái
             int countBottomLeft = 0;
             for (int i = 1; i <= Const.ChessBoard_W - point.X; i++)
             {
