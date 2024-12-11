@@ -36,14 +36,6 @@ namespace Tic_Tac_Toe
             set => currentplayer = value; 
         }
 
-        //Tạo biến đếm quân cờ đã đánh
-        private int filledcells;
-        public int FilledCells
-        {
-            get { return filledcells; }
-            set { filledcells = value; }
-        }
-
         //Tạo biến tên người chơi
         private TextBox playername;
         public TextBox PlayerName 
@@ -114,8 +106,9 @@ namespace Tic_Tac_Toe
             CurrentPlayer = 0;
         }
         #endregion
-        //Vùng phương thức vẽ bàn cờ
+        //Vùng phương thức quản lý bàn cờ
         #region Methods
+        //Hàm vẽ bàn cờ
         public void Draw_ChessBoard()
         {
             //Cho phép nhấn vào 1 button bất kỳ
@@ -127,9 +120,8 @@ namespace Tic_Tac_Toe
             //Khởi tạo lại lượt chơi, bắt đầu từ player 1
             CurrentPlayer = 0;
             Change_Player_Turn();
-            FilledCells = 0;
 
-            Button oldbutton = new Button() { Width = 0, Location = new Point(0, 0) };
+            //Bắt đầu vẽ bàn cờ
             Chess_Matrix = new List<List<Button>>();
             for (int i = 0; i < Const.ChessBoard_H; i++)
             {
@@ -140,7 +132,7 @@ namespace Tic_Tac_Toe
                     {
                         Width = Const.Chess_W,
                         Height = Const.Chess_H,
-                        Location = new Point(oldbutton.Location.X + oldbutton.Width, oldbutton.Location.Y),
+                        Location = new Point(j * Const.Chess_W, i * Const.Chess_W),
                         BackColor = Color.White,
                         //Dàn hình ảnh trải đều trên button
                         BackgroundImageLayout = ImageLayout.Stretch,
@@ -150,17 +142,10 @@ namespace Tic_Tac_Toe
 
                     button.Click += button_Click;
 
-                    FilledCells++;
-
                     ChessBoard.Controls.Add(button);
                     Chess_Matrix[i].Add(button);
-
-                    oldbutton = button;
                 }
-                oldbutton.Location = new Point(0, oldbutton.Location.Y + Const.Chess_H);
-                oldbutton.Width = 0;
-                oldbutton.Height = 0;
-
+                
             }
         }
         void button_Click(object sender, EventArgs e)
@@ -169,9 +154,29 @@ namespace Tic_Tac_Toe
 
             //Kiểm tra xem ô đã được đánh hay chưa
             if (button.BackgroundImage != null)
+            {
                 return;
+            }
+
             Mark(button);
+
+            //Tạo biến đếm các ô đã được đánh trong bàn cờ
+            int count = 0;
+
+            foreach (var i in Chess_Matrix)
+            {
+                foreach (var j in i)
+                {
+                    if (j.BackgroundImage != null)
+                        count++;
+                }    
+            }
+
             Change_Player_Turn();
+
+            //Kiểm tra trường hợp hòa 
+            if (count == Const.ChessBoard_W * Const.ChessBoard_H)
+                EndwDraw();
 
             //Gọi event playermarked 
             if (playermarked != null)
@@ -181,7 +186,6 @@ namespace Tic_Tac_Toe
             {
                 EndGame();
             }
-
         }
         //Hàm thông báo kết thúc Game nếu có người thắng
         private void EndGame()
@@ -190,6 +194,13 @@ namespace Tic_Tac_Toe
                 endedgame(this, new EventArgs());
             CurrentPlayer = CurrentPlayer == 1 ? 0 : 1;
             MessageBox.Show($"{Player[currentplayer].Name} đã chiến thắng! Kết thúc Game!");
+        }
+        //Hàm thông báo kết thúc nếu hòa
+        private void EndwDraw()
+        {
+            if (endedgame != null)
+                endedgame(this, new EventArgs());
+            MessageBox.Show("Hòa nhau! Kết thúc Game!");
         }
         private bool IsWinning(Button button)
         {

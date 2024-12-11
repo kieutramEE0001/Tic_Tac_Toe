@@ -64,14 +64,14 @@
             this.pnlChessBoard.Location = new System.Drawing.Point(12, 31);
             this.pnlChessBoard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlChessBoard.Name = "pnlChessBoard";
-            this.pnlChessBoard.Size = new System.Drawing.Size(683, 664);
+            this.pnlChessBoard.Size = new System.Drawing.Size(731, 664);
             this.pnlChessBoard.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(704, 31);
+            this.panel1.Location = new System.Drawing.Point(749, 31);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(317, 294);
@@ -95,7 +95,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(705, 329);
+            this.panel2.Location = new System.Drawing.Point(750, 329);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(316, 88);
@@ -121,7 +121,7 @@
             this.panel3.Controls.Add(this.pictbMark);
             this.panel3.Controls.Add(this.prgbarTime);
             this.panel3.Controls.Add(this.txtbPlayerName);
-            this.panel3.Location = new System.Drawing.Point(704, 534);
+            this.panel3.Location = new System.Drawing.Point(749, 534);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(317, 161);
@@ -191,7 +191,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1033, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1078, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -227,7 +227,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Location = new System.Drawing.Point(704, 422);
+            this.panel4.Location = new System.Drawing.Point(749, 422);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(317, 107);
             this.panel4.TabIndex = 5;
@@ -236,7 +236,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 708);
+            this.ClientSize = new System.Drawing.Size(1078, 708);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
