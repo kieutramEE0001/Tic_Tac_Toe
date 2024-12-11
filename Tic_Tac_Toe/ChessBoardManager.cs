@@ -287,9 +287,9 @@ namespace Tic_Tac_Toe
             Point point = GetChessPoint(button);
             //Duyệt lên phía trên, bên phải
             int countTopRight = 0;
-            for (int i = 0; i <= point.X; i++)
+            for (int i = 0; i <= point.Y; i++)
             {
-                if (point.Y - i < 0 || point.X + i > Const.ChessBoard_W)
+                if (point.Y - i < 0 || point.X + i >= Const.ChessBoard_W)
                     break;
                 if (Chess_Matrix[point.Y - i][point.X + i].BackgroundImage == button.BackgroundImage)
                 {
@@ -300,7 +300,7 @@ namespace Tic_Tac_Toe
             }
             //Duyệt xuống phía dưới, bên trái
             int countBottomLeft = 0;
-            for (int i = 1; i <= Const.ChessBoard_W - point.X; i++)
+            for (int i = 1; i <= Const.ChessBoard_W - point.Y; i++)
             {
                 if (point.Y + i >= Const.ChessBoard_H || point.X - i < 0)
                     break;

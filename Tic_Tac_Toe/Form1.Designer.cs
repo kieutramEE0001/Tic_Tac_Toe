@@ -61,17 +61,19 @@
             // 
             // pnlChessBoard
             // 
-            this.pnlChessBoard.Location = new System.Drawing.Point(12, 31);
+            this.pnlChessBoard.Location = new System.Drawing.Point(9, 25);
+            this.pnlChessBoard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlChessBoard.Name = "pnlChessBoard";
-            this.pnlChessBoard.Size = new System.Drawing.Size(760, 702);
+            this.pnlChessBoard.Size = new System.Drawing.Size(570, 606);
             this.pnlChessBoard.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(781, 31);
+            this.panel1.Location = new System.Drawing.Point(586, 25);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(306, 306);
+            this.panel1.Size = new System.Drawing.Size(230, 249);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -80,8 +82,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = global::Tic_Tac_Toe.Properties.Resources._16;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(306, 306);
+            this.pictureBox1.Size = new System.Drawing.Size(230, 249);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -96,9 +99,10 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(781, 344);
+            this.panel2.Location = new System.Drawing.Point(586, 281);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(306, 222);
+            this.panel2.Size = new System.Drawing.Size(230, 198);
             this.panel2.TabIndex = 2;
             // 
             // btnLAN
@@ -106,9 +110,10 @@
             this.btnLAN.BackColor = System.Drawing.Color.Pink;
             this.btnLAN.Font = new System.Drawing.Font("VT323", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLAN.ForeColor = System.Drawing.Color.White;
-            this.btnLAN.Location = new System.Drawing.Point(85, 158);
+            this.btnLAN.Location = new System.Drawing.Point(64, 128);
+            this.btnLAN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLAN.Name = "btnLAN";
-            this.btnLAN.Size = new System.Drawing.Size(146, 50);
+            this.btnLAN.Size = new System.Drawing.Size(110, 41);
             this.btnLAN.TabIndex = 7;
             this.btnLAN.Text = "CONNECT";
             this.btnLAN.UseVisualStyleBackColor = false;
@@ -116,18 +121,20 @@
             // txtbID
             // 
             this.txtbID.Font = new System.Drawing.Font("Anaheim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbID.Location = new System.Drawing.Point(59, 115);
+            this.txtbID.Location = new System.Drawing.Point(44, 93);
+            this.txtbID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtbID.Name = "txtbID";
-            this.txtbID.Size = new System.Drawing.Size(218, 37);
+            this.txtbID.Size = new System.Drawing.Size(164, 31);
             this.txtbID.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Anaheim", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 122);
+            this.label3.Location = new System.Drawing.Point(9, 99);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 30);
+            this.label3.Size = new System.Drawing.Size(34, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "ID:";
             // 
@@ -137,36 +144,38 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("VT323", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(84, 57);
+            this.label2.Location = new System.Drawing.Point(63, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 36);
+            this.label2.Size = new System.Drawing.Size(122, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Five to win";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quick Love", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Quick Love", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(36, 24);
+            this.label1.Location = new System.Drawing.Point(8, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 33);
+            this.label1.Size = new System.Drawing.Size(218, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tic_Tac_Toe";
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.pictbMark);
             this.panel3.Controls.Add(this.prgbarTime);
             this.panel3.Controls.Add(this.txtbPlayerName);
-            this.panel3.Location = new System.Drawing.Point(781, 572);
+            this.panel3.Location = new System.Drawing.Point(586, 485);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(306, 161);
+            this.panel3.Size = new System.Drawing.Size(230, 139);
             this.panel3.TabIndex = 3;
             // 
             // pictureBox2
@@ -174,9 +183,10 @@
             this.pictureBox2.BackgroundImage = global::Tic_Tac_Toe.Properties.Resources._18;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.InitialImage = global::Tic_Tac_Toe.Properties.Resources._17;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 38);
+            this.pictureBox2.Size = new System.Drawing.Size(28, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -185,9 +195,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Anaheim", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 76);
+            this.label4.Location = new System.Drawing.Point(9, 62);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 30);
+            this.label4.Size = new System.Drawing.Size(104, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "Next Turn: ";
             // 
@@ -195,9 +206,10 @@
             // 
             this.pictbMark.BackColor = System.Drawing.Color.Transparent;
             this.pictbMark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictbMark.Location = new System.Drawing.Point(216, 69);
+            this.pictbMark.Location = new System.Drawing.Point(162, 56);
+            this.pictbMark.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictbMark.Name = "pictbMark";
-            this.pictbMark.Size = new System.Drawing.Size(77, 77);
+            this.pictbMark.Size = new System.Drawing.Size(58, 63);
             this.pictbMark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictbMark.TabIndex = 2;
             this.pictbMark.TabStop = false;
@@ -205,17 +217,19 @@
             // prgbarTime
             // 
             this.prgbarTime.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.prgbarTime.Location = new System.Drawing.Point(59, 13);
+            this.prgbarTime.Location = new System.Drawing.Point(44, 11);
+            this.prgbarTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.prgbarTime.Name = "prgbarTime";
-            this.prgbarTime.Size = new System.Drawing.Size(234, 36);
+            this.prgbarTime.Size = new System.Drawing.Size(176, 29);
             this.prgbarTime.TabIndex = 1;
             // 
             // txtbPlayerName
             // 
             this.txtbPlayerName.Font = new System.Drawing.Font("Anaheim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbPlayerName.Location = new System.Drawing.Point(17, 109);
+            this.txtbPlayerName.Location = new System.Drawing.Point(13, 89);
+            this.txtbPlayerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtbPlayerName.Name = "txtbPlayerName";
-            this.txtbPlayerName.Size = new System.Drawing.Size(179, 37);
+            this.txtbPlayerName.Size = new System.Drawing.Size(135, 31);
             this.txtbPlayerName.TabIndex = 0;
             // 
             // tmCooldown
@@ -229,7 +243,8 @@
             this.mENUToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1098, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(824, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -240,14 +255,14 @@
             this.quitToolStripMenuItem});
             this.mENUToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.mENUToolStripMenuItem.Text = "MENU";
             // 
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
             this.newGameToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
@@ -255,15 +270,15 @@
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // Tic_Tac_Toe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 753);
+            this.ClientSize = new System.Drawing.Size(824, 642);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -271,6 +286,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Tic_Tac_Toe";
             this.Text = "Tic_Tac_Toe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tic_Tac_Toe_FormClosing);
