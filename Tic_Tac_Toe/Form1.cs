@@ -93,6 +93,8 @@ namespace Tic_Tac_Toe
             if (MessageBox.Show("Bạn có chắc muốn thoát Game không?", "THÔNG BÁO", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
                 e.Cancel = true; //Thay đổi event
         }
+
+
     }
 
   
