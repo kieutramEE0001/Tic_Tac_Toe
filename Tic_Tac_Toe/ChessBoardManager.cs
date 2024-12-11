@@ -36,6 +36,14 @@ namespace Tic_Tac_Toe
             set => currentplayer = value; 
         }
 
+        //Tạo biến đếm quân cờ đã đánh
+        private int filledcells;
+        public int FilledCells
+        {
+            get { return filledcells; }
+            set { filledcells = value; }
+        }
+
         //Tạo biến tên người chơi
         private TextBox playername;
         public TextBox PlayerName 
@@ -119,6 +127,7 @@ namespace Tic_Tac_Toe
             //Khởi tạo lại lượt chơi, bắt đầu từ player 1
             CurrentPlayer = 0;
             Change_Player_Turn();
+            FilledCells = 0;
 
             Button oldbutton = new Button() { Width = 0, Location = new Point(0, 0) };
             Chess_Matrix = new List<List<Button>>();
@@ -140,6 +149,8 @@ namespace Tic_Tac_Toe
                     };
 
                     button.Click += button_Click;
+
+                    FilledCells++;
 
                     ChessBoard.Controls.Add(button);
                     Chess_Matrix[i].Add(button);
@@ -169,8 +180,10 @@ namespace Tic_Tac_Toe
             if (IsWinning(button))
             {
                 EndGame();
-            }    
+            }
+
         }
+        //Hàm thông báo kết thúc Game nếu có người thắng
         private void EndGame()
         {
             if (endedgame != null) 
@@ -300,7 +313,7 @@ namespace Tic_Tac_Toe
             }
             //Duyệt xuống phía dưới, bên trái
             int countBottomLeft = 0;
-            for (int i = 1; i <= Const.ChessBoard_W - point.Y; i++)
+            for (int i = 1; i <= Const.ChessBoard_H - point.Y; i++)
             {
                 if (point.Y + i >= Const.ChessBoard_H || point.X - i < 0)
                     break;

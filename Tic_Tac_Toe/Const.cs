@@ -13,8 +13,8 @@ namespace Tic_Tac_Toe
         public static int Chess_H = 30;
 
         //Khai báo biến chiều dài và chiều cao của bàn cờ
-        public static int ChessBoard_W = 20;
-        public static int ChessBoard_H = 20;
+        public static int ChessBoard_W = 5;
+        public static int ChessBoard_H = 5;
 
         //Khai báo biến step của progress bar và thời gian của mỗi nước cờ 
         public static int CoolDown_Step = 100; 

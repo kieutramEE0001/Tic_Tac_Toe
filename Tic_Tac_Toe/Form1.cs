@@ -34,7 +34,6 @@ namespace Tic_Tac_Toe
 
             NewGame();
 
-            //tmCooldown.Start();
         }
 
         //Hàm kết thúc Game
