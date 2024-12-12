@@ -145,7 +145,6 @@ namespace Tic_Tac_Toe
                     ChessBoard.Controls.Add(button);
                     Chess_Matrix[i].Add(button);
                 }
-                
             }
         }
         void button_Click(object sender, EventArgs e)
@@ -174,14 +173,15 @@ namespace Tic_Tac_Toe
 
             Change_Player_Turn();
 
+            //Gọi event playermarked để khởi tạo lại thanh progress bar và timer
+            if (playermarked != null)
+                playermarked(this, new EventArgs());
+
             //Kiểm tra trường hợp hòa 
             if (count == Const.ChessBoard_W * Const.ChessBoard_H)
                 EndwDraw();
 
-            //Gọi event playermarked 
-            if (playermarked != null)
-                playermarked(this, new EventArgs());
-
+            //Kiểm tra trường hợp thắng
             if (IsWinning(button))
             {
                 EndGame();
