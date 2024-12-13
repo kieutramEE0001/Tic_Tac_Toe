@@ -186,6 +186,7 @@ namespace Tic_Tac_Toe
             {
                 EndGame();
             }
+
         }
         //Hàm thông báo kết thúc Game nếu có người thắng
         private void EndGame()
