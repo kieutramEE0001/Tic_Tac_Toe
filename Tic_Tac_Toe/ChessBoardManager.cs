@@ -173,7 +173,7 @@ namespace Tic_Tac_Toe
 
             Change_Player_Turn();
 
-            //Gọi event playermarked để khởi tạo lại thanh progress bar và timer
+            //Gọi event playermarked 
             if (playermarked != null)
                 playermarked(this, new EventArgs());
 
