@@ -15,17 +15,14 @@ namespace Tic_Tac_Toe
             get => name; 
             set => name = value; 
         }
-
         private Image mark;
         public Image Mark 
         { 
             get => mark; 
             set => mark = value; 
         }
-
         public Player(string name, Image mark)
         {
-            //Biểu thị cho lớp hiện tại, ứng dụng thứ tự ưu tiên biến cục bộ và biến toàn cục
             this.Name = name;
             this.Mark = mark;
         }
