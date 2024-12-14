@@ -47,7 +47,6 @@ namespace Tic_Tac_Toe
             get => playermark;
             set => playermark = value;
         }
-
         //Tạo ma trận quân cờ để xác định thắng thua
         private List<List<Button>> chessmatrix;
         public List<List<Button>> Chess_Matrix 
@@ -55,6 +54,7 @@ namespace Tic_Tac_Toe
             get => chessmatrix;
             set => chessmatrix = value;
         }
+
         //Tạo event thông báo người chơi đã click vào 1 ô trong bàn cờ
         private event EventHandler playermarked;
         public event EventHandler PlayerMarked
