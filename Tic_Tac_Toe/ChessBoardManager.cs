@@ -16,18 +16,16 @@ namespace Tic_Tac_Toe
         private Panel chessboard;
         public Panel ChessBoard
         {
-            get { return chessboard; }
-            set { chessboard = value; }
+            get => chessboard;
+            set => chessboard = value;
         }
-
         //Tạo danh sách người chơi
         private List<Player> player;
         public List<Player> Player 
         {
-            get { return player; }
-            set { player = value; }
+            get => player;
+            set => player = value;
         }
-
         //Tạo biến lưu lượt đánh cờ
         private int currentplayer;
         public int CurrentPlayer 
@@ -35,31 +33,28 @@ namespace Tic_Tac_Toe
             get => currentplayer; 
             set => currentplayer = value; 
         }
-
         //Tạo biến tên người chơi
         private TextBox playername;
         public TextBox PlayerName 
         {
-            get { return playername; }
-            set { playername = value; }
+            get => playername;
+            set => playername = value;
         }
-
         //Tạo biến quân cờ
         private PictureBox playermark;
         public PictureBox PlayerMark 
         {
-            get { return playermark; }
-            set { playermark = value; }
+            get => playermark;
+            set => playermark = value;
         }
 
         //Tạo ma trận quân cờ để xác định thắng thua
         private List<List<Button>> chessmatrix;
         public List<List<Button>> Chess_Matrix 
         {
-            get { return chessmatrix; }
-            set { chessmatrix = value; }
+            get => chessmatrix;
+            set => chessmatrix = value;
         }
-
         //Tạo event thông báo người chơi đã click vào 1 ô trong bàn cờ
         private event EventHandler playermarked;
         public event EventHandler PlayerMarked
@@ -73,7 +68,6 @@ namespace Tic_Tac_Toe
                 playermarked -= value;
             }
         }
-
         //Tạo event thông báo kết thúc game
         private event EventHandler endedgame;
         public event EventHandler EndedGame
@@ -87,7 +81,6 @@ namespace Tic_Tac_Toe
                 endedgame -= value;
             }
         }
-
         #endregion
         //Vùng phương thức khởi tạo
         #region Initialize
